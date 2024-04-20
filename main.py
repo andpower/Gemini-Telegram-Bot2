@@ -260,7 +260,7 @@ async def main():
         try:
             m = message.text.strip().split(maxsplit=1)[1].strip()
         except IndexError:
-            await bot.reply_to( message , escape("Please add what you want to say after /gemini. \nFor example: `/gemini Who is john lennon?`"), parse_mode="MarkdownV2")
+            await bot.reply_to( message , escape("Por favor, añade lo que quieras decir después de /gemini. \nPor ejemplo: '/gemini ¿Quién es John Lennon??`"), parse_mode="MarkdownV2")
             return
         await gemini(bot,message,m)
 
@@ -269,7 +269,7 @@ async def main():
         try:
             m = message.text.strip().split(maxsplit=1)[1].strip()
         except IndexError:
-            await bot.reply_to( message , escape("Please add what you want to say after /gemini_pro. \nFor example: `/gemini_pro Who is john lennon?`"), parse_mode="MarkdownV2")
+            await bot.reply_to( message , escape("Por favor, añade lo que quieras decir después de /gemini_pro. \nPor ejemplo: '/gemini_pro ¿Quién es john lennon?`"), parse_mode="MarkdownV2")
             return
         await gemini_pro(bot,message,m)
             
