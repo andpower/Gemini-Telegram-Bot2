@@ -290,14 +290,14 @@ async def main():
         # Check if the player is already in default_model_dict.
         if str(message.from_user.id) not in default_model_dict:
             default_model_dict[str(message.from_user.id)] = False
-            await bot.reply_to( message , "Now you are using gemini-pro:1.5")
+            await bot.reply_to( message , "Ahora estás usando gemini-pro:1.5")
             return
         if default_model_dict[str(message.from_user.id)] == True:
             default_model_dict[str(message.from_user.id)] = False
-            await bot.reply_to( message , "Now you are using gemini-pro:1.5")
+            await bot.reply_to( message , "Ahora estás usando gemini-pro:1.5")
         else:
             default_model_dict[str(message.from_user.id)] = True
-            await bot.reply_to( message , "Now you are using gemini-pro:1.0")
+            await bot.reply_to( message , "Ahora estás usando gemini-pro:1.0")
         
     
     
