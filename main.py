@@ -239,10 +239,10 @@ async def main():
     await bot.set_my_commands(
         commands=[
             telebot.types.BotCommand("start", "Start"),
-            telebot.types.BotCommand("gemini", "using model:gemini-pro-1.0"),
-            telebot.types.BotCommand("gemini_pro", "using model:gemini-pro-1.5"),
-            telebot.types.BotCommand("clear", "Clear all history"),
-            telebot.types.BotCommand("switch","switch default model")
+            telebot.types.BotCommand("gemini", "Usando el modelo:Gemini-Pro-1.0"),
+            telebot.types.BotCommand("gemini_pro", "Usando el modelo:Gemini-Pro-1.5"),
+            telebot.types.BotCommand("clear", "Borrar todo el historial"),
+            telebot.types.BotCommand("switch","Cambiar modelo predeterminado")
         ],
     )
     print("Bot init done.")
@@ -251,7 +251,7 @@ async def main():
     @bot.message_handler(commands=["start"])
     async def gemini_handler(message: Message):
         try:
-            await bot.reply_to( message , escape("Welcome, you can ask me questions now. \nFor example: `Who is john lennon?`"), parse_mode="MarkdownV2")
+            await bot.reply_to( message , escape("Bienvenido, puedes hacerme preguntas ahora. \nPor ejemplo: '¿Quién es juan? lennon?`"), parse_mode="MarkdownV2")
         except IndexError:
             await bot.reply_to(message, error_info)
 
